@@ -30,7 +30,15 @@ function App() {
           <Route path="/teams" element={<Teams />} />
           <Route path="/users" element={<Users />} />
           <Route path="/workouts" element={<Workouts />} />
-          <Route path="/" element={<h2>Welcome to OctoFit Tracker!</h2>} />
+          <Route path="/" element={
+            <div className="card page-card">
+              <div className="card-body">
+                <h2 className="card-title page-title">Welcome to OctoFit Tracker!</h2>
+                <p className="card-text text-muted">Use the navigation above to browse Activities, Leaderboard, Teams, Users and Workouts.</p>
+                <a className="btn btn-primary" href="/activities">View Activities</a>
+              </div>
+            </div>
+          } />
         </Routes>
       </div>
     </Router>

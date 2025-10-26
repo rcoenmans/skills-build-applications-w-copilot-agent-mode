@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+/* OctoFit Tracker app-level styles that complement Bootstrap */
+
+:root {
+  --brand-bg: #f8f9fa;
+  --card-radius: 0.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--brand-bg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-container {
+  padding: 1.25rem 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.page-card {
+  border-radius: var(--card-radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.App-link {
-  color: #61dafb;
+.page-title {
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-responsive {
+  margin-top: 0.5rem;
+}
+
+.btn-refresh {
+  margin-left: 0.5rem;
+}
+
+/* Modal backdrop custom for React toggled modals */
+.modal-backdrop-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 1040;
+}
+
+/* small responsive tweaks */
+@media (max-width: 576px) {
+  .table-responsive { font-size: 0.9rem; }
 }
